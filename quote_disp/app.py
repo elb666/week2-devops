@@ -18,11 +18,11 @@ def home():
 
 @app.route("/get_quote")
 def quote():
-    quote = requests.get("http://gen:5000/quote").text
+    quote = requests.get("http://gen:8000/quote").text
     print("quote - ", quote)
 
     return render_template("quote.html", quote=quote)
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True, port=5001)
+    app.run(host="0.0.0.0", debug=True, port=8001)
